@@ -25,3 +25,6 @@ docker / dockerfile := {
     entryPoint("java", "-cp", classpathString, mainclass)
   }
 }
+
+libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.11" % "test"
