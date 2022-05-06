@@ -1,5 +1,3 @@
-package `a-szczepanik`
-
 object ParserApp extends App {
 
   import scopt.OParser

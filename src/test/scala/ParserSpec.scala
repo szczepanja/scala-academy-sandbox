@@ -1,10 +1,6 @@
-package `a-szczepanik`
-
+import org.scalatest.flatspec._
+import org.scalatest.matchers._
 import scopt.OParser
-
-import org.scalatest._
-import flatspec._
-import matchers._
 
 class ParserSpec extends AnyFlatSpec with should.Matchers {
 
