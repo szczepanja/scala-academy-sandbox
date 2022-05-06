@@ -28,3 +28,14 @@ docker / dockerfile := {
 
 libraryDependencies += "org.scalactic" %% "scalactic" % "3.2.12"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.12" % "test"
+
+docker / imageNames := Seq(
+  ImageName(s"${organization.value}/${name.value}:latest"),
+
+  ImageName(
+    namespace = Some(organization.value),
+    repository = name.value,
+    tag = Some("v" + version.value)
+  )
+)
+ThisBuild / organization := "anja"
