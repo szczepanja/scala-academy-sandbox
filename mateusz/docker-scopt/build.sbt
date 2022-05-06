@@ -1,10 +1,10 @@
 ThisBuild / version := "0.1.0-SNAPSHOT"
-
+ThisBuild / organization := "mateusz"
 ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "args-print"
+    name := "args-print-scopt"
   )
 
 libraryDependencies += "com.github.scopt" %% "scopt" % "4.0.1"
@@ -31,6 +31,5 @@ docker / dockerfile := {
 }
 
 docker / imageNames := Seq(
-  // Sets the latest tag
-  ImageName("args-print-scopt-2.1")
+  ImageName(s"${organization.value}/${name.value}:${version.value}")
 )
